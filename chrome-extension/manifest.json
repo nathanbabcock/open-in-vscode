@@ -1,0 +1,8 @@
+{
+  "manifest_version": 3,
+  "name": "Open in VS Code",
+  "version": "1.0.0",
+  "devtools_page": "devtools.html",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["*://localhost/*"]
+}
