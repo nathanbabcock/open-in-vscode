@@ -38,7 +38,7 @@ A couple things to note:
 - It's only configured to work on `localhost` domains, both for security and because remote production domains are unlikely to have a sourcemap pointing to anything relevant on the local filesystem
   - **todo:** fall back to default "Open in source panel" behavior there (PR welcome)
 
-On the other end, the VS Code extension listens for custom URI events and interpets them as workspace file URLs ([`protocol.ts`](./vscode-extension/src/protocol.ts):
+On the other end, the VS Code extension listens for custom URI events and interpets them as workspace file URLs ([`protocol.ts`](./vscode-extension/src/protocol.ts)):
 
 ```ts
 handleUri(uri: Uri): void {
@@ -70,6 +70,8 @@ handleUri(uri: Uri): void {
 - Open Devtools settings and set "Open in VS Code" as the default link handler:
 
 ![Devtools link handling](link-handling.png)
+
+You an also right click on any resource link and choose "Open with Open in VS Code" on a case-by-case basis.
 
 ## Development
 
