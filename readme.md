@@ -35,6 +35,8 @@ A couple things to note:
 - The types and API docs are missing the `lineNumber` callback param
 - The custom URI authority must be `[publisher].[identifier]` in order for the VS Code extension to receive the custom URI event
 - `chrome.scripting` is used instead of `chrome.tabs.update` because it gives the user the option of selecting "Always open in VS Code" on a per-domain basis, although it requires the `scripting` permission in the manifest
+- It's only configured to work on `localhost` domains, both for security and because remote production domains are unlikely to have a sourcemap pointing to anything relevant on the local filesystem
+  - **todo:** fall back to default "Open in source panel" behavior there (PR welcome)
 
 On the other end, the VS Code extension listens for custom URI events and interpets them as workspace file URLs ([`protocol.ts`](./vscode-extension/src/protocol.ts):
 
